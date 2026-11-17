@@ -14,11 +14,9 @@ phases:
       - echo "Testing application"
       - test -f index.html
 
-  post_build:
-    commands:
-      - echo "Deploying website to S3"
-      - aws s3 sync . s3://santhanamari-s3-bucket/ --delete --exclude ".git/*" --exclude "build.yml"
-
 artifacts:
   files:
-    - index.html
+    - '**/*'
+  exclude-paths:
+    - .git/**/*
+    - build.yml

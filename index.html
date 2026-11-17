@@ -2,10 +2,91 @@
 <html>
 <head>
     <title>AWS CI/CD Project</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            color: #333;
+            padding: 50px 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #232f3e;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        h2 {
+            color: #198754;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #d1e7dd;
+            color: #198754;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>My First Automated Deployment</h1>
-    <p>This website is deployed automatically using GitHub and AWS.</p>
-    <h2>Deployment Successful!</h2>
+
+    <div class="container">
+        <h1>My First Automated Deployment</h1>
+
+        <p>
+            This website is deployed automatically
+            using GitHub and AWS.
+        </p>
+
+        <h2>Deployment Successful!</h2>
+
+        <div class="status">
+            Deployment Status: Active
+        </div>
+
+        <footer>
+            <p>Built with GitHub Actions and AWS</p>
+        </footer>
+    </div>
+
 </body>
 </html>

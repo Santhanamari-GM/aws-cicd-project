@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies
+
+  pre_build:
+    commands:
+      - echo Starting build process
+
+  build:
+    commands:
+      - echo Testing application
+      - test -f index.html
+
+  post_build:
+    commands:
+      - echo Deploying website to S3
+      - aws s3 sync . s3://santhanamari-s3-bucket/ --delete --exclude ".git/*" --exclude
+"buildspec.yml"
+
+artifacts:
+  files:
+    - index.html
